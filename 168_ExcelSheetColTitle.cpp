@@ -14,5 +14,14 @@ public:
     }
     return ans;
     /*** 26-cimal end ***/
+    /*** operator '+' overload ***/
+    string s = "";
+    while (n) {
+      char tp = 'A' + (n-1)%26;
+      n = (n-1)/26;
+      s = tp + s;
+    }
+    return s;
+    /*** operator '+' overload end ***/
   }
 };
